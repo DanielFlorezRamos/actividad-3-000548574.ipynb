@@ -1,0 +1,49 @@
+pruebas:
+
+
+
+prueva uno:
+
+Iniciar filtro_señales 
+Frecuencia de la señal: 1382 hz
+Media: 1000
+Desviación estándar: 300
+Umbral: 0.3
+Resultado esperado: La señal pasa el filtro
+¿Desea ingresar otra frecuencia?: no 
+
+
+prueva dos:
+
+Iniciar filtro_señales 
+Frecuencia de la señal: 572 hz
+Media: 1000
+Desviación estándar: 300
+Umbral: 0.3
+Resultado esperado: La señal es bloqueada por el filtro
+¿Desea ingresar otra frecuencia?: no 
+
+
+prueva tres:
+
+Iniciar filtro_señales 
+Frecuencia de la señal: 753 hz
+Media: 1000
+Desviación estándar: 300
+Umbral: 0.3
+Resultado esperado: La señal es bloqueada por el filtro
+¿Desea ingresar otra frecuencia?: si
+Iniciar filtro_señales 
+Frecuencia de la señal: 917 hz
+Media: 1000
+Desviación estándar: 300
+Umbral: 0.3
+Resultado esperado: La señal pasa el filtro
+¿Desea ingresar otra frecuencia?: no
+
+
+Pregunta: ¿para qué valor de frecuencia la señal deja de ser bloqueada?
+R/ el valor al cual señal deja de ser bloqueada es a 843 hz
+
+
+
