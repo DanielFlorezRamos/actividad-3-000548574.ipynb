@@ -1,0 +1,33 @@
+Program para_simular_filtrado_de_las_señales
+// Programa para simular el filtrado de las señales si pasa o no pasa por el filtro de acuerdo a la función de densidad de probabilidad.
+
+Start
+    // Declaración de constantes
+    Declare Constant MEDIA <- 1000
+    Declare Constant DESVIACION_ESTANDAR <- 300
+    Declare Constant UMBRAL <- 0.3
+
+    // Declaración de variables
+    Declare Real frecuencia_señal
+    Declare Real probabilidad_acumulada
+    Declare Real resultado
+
+    // Entrada de datos
+    Display "Ingrese la frecuencia de la señal: "
+    Input frecuencia_señal
+
+    // Proceso de cálculo de la probabilidad acumulada
+    Set probabilidad_acumulada <- 0
+    For f = 0 To frecuencia_señal Then
+        Set resultado <- (1 / (DESVIACION_ESTANDAR * sqrt(2 * pi))) * Exponencial(-(1/2) * ((f - MEDIA) / DESVIACION_ESTANDAR)^2 )
+        Set probabilidad_acumulada <- probabilidad_acumulada + resultado
+    End For
+
+    // Evaluación del resultado
+    If probabilidad_acumulada > UMBRAL Then
+        Display "La señal pasa el filtro."
+    Else
+        Display "La señal es bloqueada por el filtro."
+    End If
+
+Stop
